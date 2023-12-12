@@ -22,8 +22,6 @@ exports.isAuthenticated =async(req, res, next)=>{
         }else{
             req.user=userExist;
             req.userId=userExist[0].id;
-            // console.log("userId middleware",userExist[0].id)
-            // req.organizationNumber=userExist[0].currentOrganization;
             next();
         }
     }
